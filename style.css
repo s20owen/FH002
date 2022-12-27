@@ -1,0 +1,164 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --blueAccent: #27a5dc;
+    --white: #ffffff;
+    --black: #000;
+    --grey: rgb(156, 156, 156);
+    --lightblue: #BFEAF5;
+    --lightwhite: #EAFDFC;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    width: 100%;
+    background-color: var(--lightwhite);
+}
+
+/*
+    Navigation
+*/
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: var(--white);
+}
+
+.nav .logo{
+    padding: 0 10px;
+}
+
+.nav .menu{
+    padding: 0 14px;
+    font-size: 1.3rem;
+    color: var(--blueAccent);
+}
+
+.nav .menu:hover{
+   color: var(--lightblue);
+}
+
+/* 
+    Top Background Picture
+*/
+
+.nav-img img{
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+    Wrapper Container
+*/
+.wrapper{
+    width: 100%;
+}
+
+.wrapper h1{
+    padding: 10px 0;
+    color: var(--blueAccent);
+    text-align: center;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* 
+    Main Content
+*/
+
+.content{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 375px;
+    width: 300px;
+    cursor: pointer;
+    margin: 8px 0;
+    border-radius: 6px;
+    background-color: var(--white);
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, .05);
+}
+
+.content h3{
+    color: var(--blueAccent);
+    padding-bottom: 6px;
+}
+
+.content img{
+    width: 100%;
+    padding: 20px 0;
+    object-fit: contain;
+}
+
+.price{
+    padding: 20px 0;
+}
+
+.slash{
+    color: var(--grey);
+    text-decoration: line-through;
+}
+
+.shop-btn{
+    background-color: var(--blueAccent);
+    padding: 10px 10px;
+    color: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.shop-btn:hover{
+    background-color: var(--lightblue);
+}
+
+/*
+    Media Queries
+*/
+
+@media screen and (min-width: 600px) {
+
+    .container{
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2, 275px);
+        gap: 10px;
+    }
+    .content{
+        height: 350px;
+        width: 255px;
+    }
+
+  }
+
+  @media screen and (min-width: 1050px) {
+
+    .container{
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 355px);
+        gap: 20px;
+    }
+
+    .content{
+        height: 350px;
+        width: 275px;
+    }
+  }
