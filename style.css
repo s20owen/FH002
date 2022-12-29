@@ -7,8 +7,10 @@
     --white: #ffffff;
     --black: #000;
     --grey: rgb(156, 156, 156);
+    --lightGrey:#818181;
     --lightblue: #BFEAF5;
     --lightwhite: #EAFDFC;
+    --logoOrange: #dc6f67;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -26,6 +28,7 @@ body{
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 999;
     background-color: var(--white);
 }
 
@@ -33,15 +36,84 @@ body{
     padding: 0 10px;
 }
 
-.nav .menu{
+.icon{
     padding: 0 14px;
     font-size: 1.3rem;
     color: var(--blueAccent);
 }
 
-.nav .menu:hover{
+.icon:hover{
    color: var(--lightblue);
+   cursor: pointer;
 }
+
+.menu{
+    position: relative;
+}
+
+.menu a{
+    display: none;
+}
+
+/*
+    Sliding mobile menu
+*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--black);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+  }
+
+.sidenav-container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidenav h2{
+    color: var(--logoOrange);
+}
+  
+.sidenav a{
+    padding-top: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--lightGrey);
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: var(--white);
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.cart-notification i{
+    position: absolute;
+    top: -8px;
+    right: 56px;
+    color: red;
+    font-size: .8rem;
+}
+.hidden{
+   display: none;
+}
+
 
 /* 
     Top Background Picture
@@ -80,6 +152,7 @@ body{
 */
 
 .content{
+    position: relative;
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
@@ -92,6 +165,35 @@ body{
     border-radius: 6px;
     background-color: var(--white);
     box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, .05);
+    overflow: hidden;
+}
+
+/* 20% Off Ribbon */
+.ribbon20::before{
+    position: absolute;
+    content: "20% Off";
+    top: 10px;
+    right: -58px;
+    padding: 0.7rem;
+    width: 10rem;
+    background: var(--logoOrange);
+    color: var(--white);
+    text-align: center;
+    transform: rotate(45deg);
+}
+
+/* New Color Ribbon */
+.ribbonNew::before{
+    position: absolute;
+    content: "New Color";
+    top: 14px;
+    right: -58px;
+    padding: 0.7rem;
+    width: 10rem;
+    background: var(--logoOrange);
+    color: var(--white);
+    text-align: center;
+    transform: rotate(45deg);
 }
 
 .content h3{
@@ -127,11 +229,79 @@ body{
 }
 
 /*
+   Footer | Socials
+*/
+
+footer{
+    width: 100%;
+    background-color: var(--blueAccent);
+    padding: 10px 0;
+}
+
+footer h2{
+    text-align: center;
+}
+
+.socials{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+footer h2{
+    padding-top: 10px;
+}
+.socials i{
+    color: var(--white);
+    padding: 10px 10px;
+    font-size: 2.4rem;
+}
+
+.disclaimer{
+    color: var(--lightGrey);
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.shoutout{
+    background-color: var(--black);
+    text-align: center;
+    padding: 10px 0;
+    color: var(--lightGrey);
+}
+
+.shoutout i{
+    color: var(--logoOrange);
+}
+
+/*
     Media Queries
 */
 
 @media screen and (min-width: 600px) {
 
+    .menu{
+        position: relative;
+        padding-right: 10px;
+    }
+    .menu a{
+        display: inline;
+        justify-content: space-between;
+        padding: 0 10px;
+        color: var(--black);
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .menu a:hover{
+        color: var(--lightblue);
+    }
+
+   .menu .menu-icon{
+        display: none;
+    }
+    
     .container{
         width: auto;
         margin-left: 10px;
@@ -154,7 +324,7 @@ body{
         width: auto;
         display: grid;
         grid-template-columns: repeat(3, 355px);
-        gap: 20px;
+        gap: 10px;
     }
 
     .content{

@@ -15,6 +15,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@RobertsAutoRepair">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -29,7 +30,24 @@
         </div>
 
         <div class="menu">
-            <i class="fas fa-bars"></i>
+            <a href="#">Shop</a>
+            <a href="#">Kits</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+            <span class="hidden cart-notification"><i class="fas fa-exclamation-circle"></i></span>
+            <i class="fas fa-shopping-cart icon"></i>
+            <i class="fas fa-bars icon menu-icon" onclick="openNav()"></i>
+        </div>
+
+        <div id="Sidenav" class="sidenav">
+            <div class="sidenav-container">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <h2>Climax Crappie Jigs</h2>
+                <a href="#" class="close">Shop</a>
+                <a href="#" class="close">Kits</a>
+                <a href="#" class="close">Gallery</a>
+                <a href="#" class="close">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -41,11 +59,11 @@
         <h1>Check out our Jigs</h1>
         <div class="container">
 
-            <div class="content">
+            <div class="content ribbon20">
 
                 <img src="images/PurpleMonkey.png">
                 <h3>Purple Monkey</h3>
-
+                <h4>2" Stinger Shad</h4>
                 <div class="price">
                     <p>$4.00</p>
                     <span></span><p class="slash">$5.00</p>
@@ -57,11 +75,11 @@
                 
             </div>
 
-            <div class="content">
+            <div class="content ribbonNew">
                 
                 <img src="images/AquaMaze.png">
                 <h3>Aqua Maze</h3>
-
+                <h4>2" Stinger Shad</h4>
                 <div class="price">
                     <p>$3.00</p>
                     <span></span><p class="slash">$4.00</p>
@@ -77,7 +95,7 @@
                 
                 <img src="images/Carolina Monkey.png">
                 <h3>Carolina Monkey</h3>
-
+                <h4>2" Stinger Shad</h4>
                 <div class="price">
                     <p>$3.00</p>
                     <span></span><p class="slash">$4.00</p>
@@ -93,7 +111,7 @@
                 
                 <img src="images/Galaxy.png">
                 <h3>Galaxy</h3>
-
+                <h4>2" Stinger Shad</h4>
                 <div class="price">
                     <p>$3.00</p>
                     <span></span><p class="slash">$4.00</p>
@@ -106,6 +124,25 @@
             </div>
 
         </div>  
+
+        <footer>
+            <h2>Contact Us</h2>
+
+            <div class="socials">
+                <a href="https://m.facebook.com/people/Climax-Crappie-Jigs/100083156927876/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/routh1more/"><i class="fab fa-instagram"></i></a>
+                <a href="tiktok.com/@climaxcrappiejigs?lang=en"><i class="fas fa-video"></i></a>
+                <a href="tel:1-336-908-5786"><i class="fas fa-phone"></i></a>
+            </div>
+            <div class="disclaimer">
+                <p>Disclaimer: All social media logos and trademarks contained within this website are property of their respective owners.</p>
+            </div>
+
+        </footer>
+
+        <div class="shoutout">
+            <p>Made with <i class="fas fa-heart"></i> by Falcon Heavy Designs LLC</p>
+        </div>
 
     </div>
 
