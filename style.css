@@ -14,6 +14,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     width: 100%;
     background-color: var(--lightwhite);
@@ -114,156 +118,182 @@ body{
    display: none;
 }
 
-
-/* 
-    Top Background Picture
-*/
 .nav-img{
+    padding-top: 80px;
     width: 100%;
-    height: 50%;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.nav-img h1{
-    position: absolute;
-    top: 180px;
-    padding-left: 20px;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--white);
-    z-index: 99;
+.nav-img img{
+    object-fit: fill;
+    width: 100%;
+    max-width: 1000px;
 }
-
-.nav-img h3{
-    position: absolute;
-    padding-left: 20px;
-    top: 230px;
-    color: var(--white);
-    z-index: 99;
-}
-
-.nav-img h4{
-    position: absolute;
-    padding-left: 20px;
-    top: 260px;
-    color: var(--white);
-    z-index: 99;
-}
-
-.hero-img{
-    margin-top: 100px;
-    max-width: 100%;
-    filter: brightness(50%);
-}
-
 /* 
     Wrapper Container
 */
 .wrapper{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.wrapper h1{
-    padding: 10px 0;
-    color: var(--white);
-    text-align: center;
-    background-color: var(--blueAccent);
-}
-
-.container{
+.intro{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
+    max-width: 1000px;
+    padding: 0 10px;
 }
 
-/* 
-    Main Content
-*/
-
-.content{
-    position: relative;
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 300px;
-    cursor: pointer;
-    margin: 8px 0;
-    border-radius: 6px;
-    background-color: var(--white);
-    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, .05);
-    overflow: hidden;
-}
-
-.mystery{
-    height: 520px;
-    padding: 10px 0;
-    margin: 0 0;
-}
-
-
-/* 20% Off Ribbon */
-.ribbon20::before{
-    position: absolute;
-    content: "20% Off";
-    top: 10px;
-    right: -58px;
-    padding: 0.7rem;
-    width: 10rem;
-    background: var(--logoOrange);
-    color: var(--white);
+.intro h1{
     text-align: center;
-    transform: rotate(45deg);
+    padding: 16px 0;
 }
 
-/* New Color Ribbon */
-.ribbonNew::before{
-    position: absolute;
-    content: "New Color";
-    top: 14px;
-    right: -58px;
-    padding: 0.7rem;
-    width: 10rem;
-    background: var(--logoOrange);
-    color: var(--white);
+.intro h2{
     text-align: center;
-    transform: rotate(45deg);
+    line-height: 2rem;
 }
 
-.content h3{
+.intro a{
+    text-decoration: none;
     color: var(--blueAccent);
-    padding-bottom: 6px;
-}
-
-.content img{
-    width: 100%;
-    padding: 20px 0;
-    object-fit: contain;
-}
-
-.price{
-    padding: 20px 0;
-}
-
-.slash{
-    color: var(--grey);
-    text-decoration: line-through;
 }
 
 .shop-btn{
     background-color: var(--blueAccent);
-    padding: 10px 10px;
+    text-align: center;
     color: var(--white);
-    border-radius: 4px;
+    padding: 20px 0;
     cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 
 .shop-btn:hover{
+    background-color: var(--logoOrange);
+}
+
+/* 
+    Featured Products Section
+*/
+.featured-container{
+    width: 100%;
+    text-align: center;
+    background-color: var(--blueAccent);
+    padding: 10px 0;
+    margin: 10px 0;
+    color: var(--white);
+}
+
+/* 
+    Featured Slideshow
+*/
+
+
+.container {
+    position: relative;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+
+  .mySlides {
+    display: none;
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+  
+ 
+  .cursor {
+    cursor: pointer;
+  }
+  
+
+  .prev,
+  .next {
+    cursor: pointer;
     background-color: var(--lightblue);
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: var(--blueAccent);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+ 
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+ 
+  .caption-container {
+    text-align: center;
+    padding: 4px 16px;
+    color: var(--blueAccent)
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ 
+  .column {
+    float: left;
+    width: 20%;
+    padding: 2px 2px;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+.view a, i{
+    color: var(--blueAccent);
+    padding: 20px 0;
+}
+
+/* 
+
+    Affiliates
+
+*/
+.affiliates{
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--blueAccent);
+}
+.affiliates h1{
+    padding: 16px 0;
+}
+
+.affiliates img{
+    width: 50%;
 }
 
 /*
@@ -340,54 +370,30 @@ footer h2{
         display: none;
     }
     
-    .container{
-        width: auto;
-        margin-left: 10px;
-        margin-right: 10px;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(2, 275px);
-        gap: 10px;
-    }
-    .content{
-        height: 350px;
-        width: 255px;
+    .shop-btn{
+        width: 120px;
+        background-color: var(--blueAccent);
+        text-align: center;
+        color: var(--white);
+        padding: 20px 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
-    .content img{
-        padding: 8px 0;
+    .container {
+        position: relative;
+        max-width: 60%;
     }
-
-    .mystery{
-        height: 480px;
-        padding: 10px 0;
-        margin: 0 0;
-    }
+   
 
   }
 
   @media screen and (min-width: 1050px) {
 
-    .container{
-        width: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 355px);
-        gap: 10px;
-    }
-
-    .content{
-        height: 350px;
-        width: 275px;
-    }
-
-    .content img{
-        padding: 8px 0;
-    }
-
-    .mystery{
-        height: 480px;
-        padding: 10px 0;
-        margin: 0 0;
+    .container {
+        position: relative;
+        max-width: 50%;
     }
 
   }
