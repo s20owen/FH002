@@ -14,8 +14,8 @@
     <meta property="article:modified_time" content="2022-07-23T21:35:28+00:00">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@RobertsAutoRepair">
-    <link rel="stylesheet" href="shopstyle.css">
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="../css/shop.css">
+    <script src="../shop.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -29,11 +29,11 @@
     
     <nav class="nav">
         <div class="logo">
-            <img src="https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/01e34037e2ee6585bb93ab0e339744a0~c5_100x100.jpeg?x-expires=1672257600&x-signature=29nXrplZDlRcAVUOLd42Ag0I2d8%3D">
+            <img src="../images/Logo.png" class="logo-image">
         </div>
 
         <div class="menu">
-            <a href="index.html">Home</a>
+            <a href="../index.html">Home</a>
             <a href="#">Shop</a>
             <a href="#kits">Kits</a>
             <a href="#">Gallery</a>
@@ -47,7 +47,7 @@
             <div class="sidenav-container">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <h2>Climax Crappie Jigs</h2>
-                <a href="index.html" class="close">Home</a>
+                <a href="../index.html" class="close">Home</a>
                 <a href="#" class="close">Shop</a>
                 <a href="#kits" class="close">Kits</a>
                 <a href="#" class="close">Gallery</a>
@@ -58,7 +58,7 @@
 
     <div class="nav-img">
         <div class="hero-container">
-            <h1>RIP some LIPS</h1>
+            <h1>Slabilicious</h1>
             <h3>Homemade in the heart of North Carolina</h3>
             <h4>Veteran Owned</h4>
         </div>
@@ -70,13 +70,13 @@
         <div class="container">
 
             <!-- Jigs -->
-            <div class="content ribbon20">
+            <div class="content ribbon20" data-name="Purple Monkey" data-details='2" Stinger Shad' data-price="$3.99">
 
-                <img src="images/PurpleMonkey.png">
-                <h3>Purple Monkey</h3>
-                <h4>2" Stinger Shad</h4>
+                <img id="content-image" src="../images/PurpleMonkey.png">
+                <h3 id="content-name">Purple Monkey</h3>
+                <h4 id="content-details">2" Stinger Shad</h4>
                 <div class="price">
-                    <p>$3.99</p>
+                    <p id="content-price">$3.99</p>
                     <span></span><p class="slash">$5.00</p>
                 </div>
 
@@ -86,9 +86,9 @@
                 
             </div>
 
-            <div class="content ribbonNew">
+            <div class="content ribbonNew" data-name="Aqua Maze" data-details='2" Stinger Shad' data-price="$2.99">
                 
-                <img src="images/AquaMaze.png">
+                <img src="../images/AquaMaze.png">
                 <h3>Aqua Maze</h3>
                 <h4>2" Stinger Shad</h4>
                 <div class="price">
@@ -103,7 +103,7 @@
 
             <div class="content ribbonPopular">
                 
-                <img src="images/Carolina Monkey.png">
+                <img src="../images/Carolina Monkey.png">
                 <h3>Carolina Monkey</h3>
                 <h4>2" Stinger Shad</h4>
                 <div class="price">
@@ -118,7 +118,7 @@
 
             <div class="content">
                 
-                <img src="images/Galaxy.png">
+                <img src="../images/Galaxy.png">
                 <h3>Galaxy</h3>
                 <h4>2" Stinger Shad</h4>
                 <div class="price">
@@ -149,7 +149,7 @@
              <!-- Mystery -->
             <div class="content mystery">
                 
-                <img src="images/Mystery.png">
+                <img src="../images/Mystery.png">
                 <h3>Variety</h3>
                 <h4>2" Stinger Shad</h4>
                 <div class="price">
@@ -186,7 +186,7 @@
             <!-- Kits -->
             <div class="content">
                 
-                <img src="images/Kit.jpg">
+                <img src="../images/Kit.jpg">
                 <h3>Starter Kit</h3>
                 <h4>75 X 2" Stinger Shads + Case</h4>
                 <div class="price">
@@ -201,7 +201,7 @@
 
             <div class="content">
                 
-                <img src="images/Kit.jpg">
+                <img src="../images/Kit.jpg">
                 <h3>Rip Kit</h3>
                 <h4>125 x 2" Stinger Shads  + Case</h4>
                 <div class="price">

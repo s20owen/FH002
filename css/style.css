@@ -37,7 +37,17 @@ body{
 }
 
 .nav .logo{
-    padding: 0 10px;
+    padding: 0 4px;
+}
+
+.logo{
+    max-width: 30%;
+}
+
+.logo-image{
+   width: 140px;
+   height: 140px;
+   cursor: pointer;
 }
 
 .icon{
@@ -287,6 +297,7 @@ body{
     text-align: center;
     color: var(--white);
     background-color: var(--blueAccent);
+    padding-bottom: 20px;
 }
 .affiliates h1{
     padding: 16px 0;
@@ -294,6 +305,61 @@ body{
 
 .affiliates img{
     width: 50%;
+}
+
+/* 
+
+    Reviews
+
+*/
+
+.reviews{
+    width: 100%;
+    text-align: center;
+    background-color: var(--logoOrange);
+    padding-top: 10px;
+}
+
+.reviews h1{
+    color: var(--white);
+}
+
+.review-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 16px 6px;
+}
+
+.review-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    line-height: 1.4rem;
+    width: 260px;
+}
+
+.review-item p{
+    padding: 8px 20px;
+}
+
+.review-lower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-lower i{
+    font-size: 1.3rem;
+}
+
+.fa-user{
+    font-size: 3rem;
 }
 
 /*

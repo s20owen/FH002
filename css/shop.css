@@ -1,0 +1,452 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --blueAccent: #27a5dc;
+    --white: #ffffff;
+    --black: #000;
+    --grey: rgb(156, 156, 156);
+    --lightGrey:#818181;
+    --lightblue: #BFEAF5;
+    --lightwhite: #EAFDFC;
+    --logoOrange: #dc6f67;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    background-color: var(--lightwhite);
+}
+
+/*
+    Navigation
+*/
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    background-color: var(--white);
+}
+
+.nav .logo{
+    padding: 0 4px;
+}
+
+.logo{
+    max-width: 30%;
+}
+
+.logo-image{
+   width: 140px;
+   height: 140px;
+   cursor: pointer;
+}
+
+.icon{
+    padding: 0 14px;
+    font-size: 1.3rem;
+    color: var(--blueAccent);
+}
+
+.icon:hover{
+   color: var(--lightblue);
+   cursor: pointer;
+}
+
+.menu{
+    position: relative;
+}
+
+.menu a{
+    display: none;
+}
+
+/*
+    Sliding mobile menu
+*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--black);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+  }
+
+.sidenav-container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidenav h2{
+    color: var(--logoOrange);
+}
+  
+.sidenav a{
+    padding-top: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--lightGrey);
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: var(--white);
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.cart-notification i{
+    position: absolute;
+    top: -8px;
+    right: 56px;
+    color: red;
+    font-size: .8rem;
+}
+.hidden{
+   display: none;
+}
+
+
+/* 
+    Top Background Picture
+*/
+.nav-img{
+    background-color: var(--lightGrey);
+    background-image: url(../images/Bg.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+.hero-container{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--white);
+}
+
+.hero-img{
+    max-width: 100%;
+    filter: brightness(50%);
+}
+
+/* 
+    Wrapper Container
+*/
+.wrapper{
+    width: 100%;
+}
+
+.wrapper h1{
+    padding: 10px 0;
+    color: var(--white);
+    text-align: center;
+    background-color: var(--blueAccent);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* 
+    Main Content
+*/
+
+.content{
+    position: relative;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 300px;
+    cursor: pointer;
+    margin: 8px 0;
+    border-radius: 6px;
+    background-color: var(--white);
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, .05);
+    overflow: hidden;
+}
+
+.content img{
+    max-height: 200px;
+}
+
+
+/* 20% Off Ribbon */
+.ribbon20::before{
+    position: absolute;
+    content: "20% Off";
+    top: 10px;
+    right: -58px;
+    padding: 0.7rem;
+    width: 10rem;
+    background: var(--logoOrange);
+    color: var(--white);
+    text-align: center;
+    transform: rotate(45deg);
+}
+
+/* New Color Ribbon */
+.ribbonNew::before{
+    position: absolute;
+    content: "New Color";
+    top: 14px;
+    right: -58px;
+    padding: 0.7rem;
+    width: 10rem;
+    background: var(--logoOrange);
+    color: var(--white);
+    text-align: center;
+    transform: rotate(45deg);
+}
+
+/* Popular Ribbon */
+.ribbonPopular::before{
+    position: absolute;
+    content: "Popular";
+    top: 14px;
+    right: -58px;
+    padding: 0.7rem;
+    width: 10rem;
+    background: var(--logoOrange);
+    color: var(--white);
+    text-align: center;
+    transform: rotate(45deg);
+}
+
+.content h3{
+    color: var(--blueAccent);
+    padding-bottom: 6px;
+}
+
+.content img{
+    width: 100%;
+    padding: 20px 4px;
+    object-fit: contain;
+}
+
+.content i{
+    font-size: 4rem;
+    padding: 20px 0;
+    color: var(--logoOrange);
+}
+
+.price{
+    padding: 20px 0;
+}
+
+.slash{
+    color: var(--grey);
+    text-decoration: line-through;
+}
+
+.shop-btn{
+    background-color: var(--blueAccent);
+    padding: 10px 10px;
+    color: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.shop-btn:hover{
+    background-color: var(--lightblue);
+}
+
+.kit-anchor{
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+/* 
+
+    Pagination
+
+*/
+
+.pagination-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.pagination{
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+.pagination a.active {
+    background-color: var(--blueAccent);
+    color: white;
+    border-radius: 5px;
+}
+  
+.pagination a:hover:not(.active) {
+    background-color: var(--lightblue);
+    border-radius: 5px;
+}
+
+/*
+   Footer | Socials
+*/
+
+footer{
+    width: 100%;
+    background-color: var(--blueAccent);
+    padding: 10px 0;
+}
+
+footer h2{
+    text-align: center;
+}
+
+.socials{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+footer h2{
+    padding-top: 10px;
+}
+.socials i{
+    color: var(--white);
+    padding: 10px 10px;
+    font-size: 2.4rem;
+}
+
+.disclaimer{
+    color: var(--lightGrey);
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.shoutout{
+    background-color: var(--black);
+    text-align: center;
+    padding: 10px 0;
+    color: var(--lightGrey);
+}
+
+.shoutout i{
+    color: var(--logoOrange);
+}
+
+/*
+    Media Queries
+*/
+
+@media screen and (min-width: 603px) {
+
+    .menu{
+        position: relative;
+        padding-right: 10px;
+    }
+    .menu a{
+        display: inline;
+        justify-content: space-between;
+        padding: 0 10px;
+        color: var(--black);
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .menu a:hover{
+        color: var(--lightblue);
+    }
+
+   .menu .menu-icon{
+        display: none;
+    }
+    
+    .container{
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2, 275px);
+        gap: 10px;
+    }
+    .content{
+        height: 350px;
+        width: 255px;
+    }
+
+    .content img{
+        padding: 8px 0;
+    }
+
+    .mystery{
+        height: auto;  
+    }
+
+  }
+
+  @media screen and (min-width: 1050px) {
+
+    .container{
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 355px);
+        gap: 10px;
+    }
+
+    .content{
+        height: 350px;
+        width: 275px;
+    }
+
+    .content img{
+        padding: 8px 0;
+    }
+
+    .mystery{
+        height: auto;
+        padding: 10px 0;
+        margin: 0 2px;
+    }
+
+  }
