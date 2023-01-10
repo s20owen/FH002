@@ -29,7 +29,7 @@ function get () {
     console.log(product);  // Foo Bar
     cont.innerHTML += 
         `<div class="left"> 
-            <img src="${product}"">
+            <img src="${product}">
         </div>
 
         <div class="right">
