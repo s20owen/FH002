@@ -28,7 +28,7 @@ function get () {
     
     cont.innerHTML += 
         `<div class="left"> 
-            <img src=${details[0]}>
+            <img src="${details[0]}">
         </div>
 
         <div class="right">
@@ -41,7 +41,7 @@ function get () {
             <span>ADD TO CART</span>
         </div>
     `;
-    console.log("product from shop " + product); 
+    console.log("details " + details[0]); 
 }
 
 get();
