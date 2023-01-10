@@ -31,7 +31,7 @@ document.querySelectorAll('.content').forEach(item => {
         console.log(path);
 
         let params = new URLSearchParams();
-        params.append("product", product);
+        params.append("product", product),
         params.append("details", JSON.stringify(info));
 
         let url = "product.html?" + params.toString();

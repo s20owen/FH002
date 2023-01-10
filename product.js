@@ -25,10 +25,10 @@ function get () {
        product = params.get("product"),
        details = JSON.parse(params.get("details"));
   
-    // (B) IT WORKS!
+    
     cont.innerHTML += 
         `<div class="left"> 
-            <img src=${product}>
+            <img src='../images/${details[0]}.png'>
         </div>
 
         <div class="right">
