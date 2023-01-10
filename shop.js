@@ -28,6 +28,7 @@ document.querySelectorAll('.content').forEach(item => {
         const info = [item.dataset.name, item.dataset.details, item.dataset.price];
 
         let product = "../" + path;
+        console.log(path);
 
         let params = new URLSearchParams();
         params.append("product", product);

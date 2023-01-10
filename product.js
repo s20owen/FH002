@@ -26,10 +26,9 @@ function get () {
        details = JSON.parse(params.get("details"));
   
     // (B) IT WORKS!
-    console.log(product);  // Foo Bar
     cont.innerHTML += 
         `<div class="left"> 
-            <img src="${product}">
+            <img src=${product}>
         </div>
 
         <div class="right">
@@ -42,6 +41,7 @@ function get () {
             <span>ADD TO CART</span>
         </div>
     `;
+    console.log("product from shop " + product); 
 }
 
 get();
