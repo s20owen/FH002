@@ -20,12 +20,11 @@ close.forEach(element => {
 const cont = document.getElementById("product-container");
 // content from shop page
 function get () {
-    // (A) GET THE PARAMETERS
+    
     let params = new URLSearchParams(window.location.search),
        product = params.get("product"),
        details = JSON.parse(params.get("details"));
   
-    
     cont.innerHTML += 
         `<div class="left"> 
             <img src="${details[0]}">
