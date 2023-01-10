@@ -28,13 +28,13 @@ function get () {
     
     cont.innerHTML += 
         `<div class="left"> 
-            <img src='../images/${details[0]}.png'>
+            <img src=${details[0]}>
         </div>
 
         <div class="right">
-            <h1>${details[0]}</h1>
-            <p>${details[1]}</p>
+            <h1>${details[1]}</h1>
             <p>${details[2]}</p>
+            <p>${details[3]}</p>
             
             <input class="stepper" type="number" id="quantity" name="quantity" step="1" value="1">
             <p>quantity</p>

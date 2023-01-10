@@ -25,7 +25,7 @@ document.querySelectorAll('.content').forEach(item => {
         const result = string.split("/");
         const path = result[3] + '/' + result[4];
 
-        const info = [item.dataset.name, item.dataset.details, item.dataset.price];
+        const info = [item.dataset.src, item.dataset.name, item.dataset.details, item.dataset.price];
 
         let product = "../" + path;
         console.log(path);
